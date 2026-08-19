@@ -1,0 +1,38 @@
+DNS Recursive Resolution Evidence
+=================================
+
+Assessment Type:
+Black-box network security assessment
+
+Target:
+TARGET_IP
+
+Test:
+Recursive DNS resolution for external domains
+
+Command:
+dig @TARGET_IP google.com A
+
+Observed:
+status: NOERROR
+flags: qr rd ra
+
+External domains successfully resolved:
+
+- google.com
+- microsoft.com
+- cloudflare.com
+- wikipedia.org
+- example.com
+
+Interpretation:
+The resolver successfully processed DNS queries for external
+Internet domains and advertised recursive DNS availability
+through the RA flag.
+
+Conclusion:
+The DNS service demonstrated Internet-accessible recursive
+resolution functionality.
+
+Evidence Classification:
+Confirmed

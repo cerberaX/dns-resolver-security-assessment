@@ -1,0 +1,27 @@
+nmap -sV -sC -O -A <Target_IP> 
+Starting Nmap 7.99 ( https://nmap.org ) at 2026-08-11 17:21 +0500
+
+Not shown: 993 closed tcp ports (reset)
+PORT     STATE SERVICE        VERSION
+21/tcp   open  tcpwrapped
+53/tcp   open  domain         Mikrotik dnsd
+80/tcp   open  http           OpenResty web app server
+|_http-title: Did not follow redirect to https://<web-site>
+|_http-server-header: openresty
+443/tcp  open  ssl/https      openresty
+|_http-server-header: openresty
+|_http-title: 400 The plain HTTP request was sent to HTTPS port
+2000/tcp open  bandwidth-test MikroTik bandwidth-test server
+2022/tcp open  ssh            OpenSSH 9.6p1 Ubuntu 3ubuntu13.18 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   256 42:83:df:21:36:bf:1c:6c:17:a4:6d:05:22:c3:0e:c9 (ECDSA)
+|_  256 37:9d:03:78:0e:99:42:49:93:9b:e5:12:67:26:91:b0 (ED25519)
+8080/tcp open  http           nginx 1.21.3
+|_http-cors: HEAD GET POST PUT DELETE PATCH
+|_http-open-proxy: Proxy might be redirecting requests
+|_http-title: Huly
+|_http-server-header: nginx/1.21.3
+Aggressive OS guesses: Linux 5.3 (90%), OpenWrt 0.9 - 7.09 (Linux 2.4.30 - 2.4.34) (88%), OpenWrt White Russian 0.9 (Linux 2.4.30) (88%), OpenWrt Kamikaze 7.09 (Linux 2.6.22) (88%), HP P2000 G3 NAS device (88%), Linux 2.6.32 (87%), ProVision-ISR security DVR (87%), OpenWrt 22.03 (Linux 5.10) (87%), MikroTik RouterOS 7.2 - 7.5 (Linux 5.6.3) (87%), Linux 5.10 - 5.18 (87%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 10 hops
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel

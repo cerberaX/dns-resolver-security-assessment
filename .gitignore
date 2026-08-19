@@ -1,0 +1,19 @@
+# OS / editor
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+.vscode/
+
+# Temporary files
+*.tmp
+*.temp
+*.log
+
+# Private/local files
+.env
+.env.*
+*.key
+*.pem
+id_rsa
+id_ed25519

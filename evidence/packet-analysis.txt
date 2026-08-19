@@ -1,0 +1,108 @@
+DNS Response Amplification Measurements
+=======================================
+
+Measurement Method:
+Real packet capture using tcpdump.
+
+Calculation:
+Amplification Ratio = Response IP Packet Size / Request IP Packet Size
+
+
+1. A example.com
+----------------
+
+Request:  57 B
+Response: 300 B
+
+Calculation:
+300 / 57 = 5.26x
+
+
+2. AAAA example.com
+-------------------
+
+Request:  57 B
+Response: 324 B
+
+Calculation:
+324 / 57 = 5.68x
+
+
+3. MX example.com
+-----------------
+
+Request:  57 B
+Response: 283 B
+
+Calculation:
+283 / 57 = 4.96x
+
+
+4. NS example.com
+-----------------
+
+Request:  57 B
+Response: 140 B
+
+Calculation:
+140 / 57 = 2.46x
+
+
+5. TXT example.com
+------------------
+
+Request:  57 B
+Response: 181 B
+
+Calculation:
+181 / 57 = 3.18x
+
+
+6. DNSKEY cloudflare.com
+------------------------
+
+Request:  83 B
+Response: 431 B
+
+Calculation:
+431 / 83 = 5.19x
+
+
+7. DS cloudflare.com
+--------------------
+
+Request:  83 B
+Response: 319 B
+
+Calculation:
+319 / 83 = 3.84x
+
+
+8. A cloudflare.com
+-------------------
+
+Request:  83 B
+Response: 303 B
+
+Calculation:
+303 / 83 = 3.65x
+
+
+Summary
+=======
+
+Minimum observed ratio:
+2.46x
+
+Maximum observed ratio:
+5.68x
+
+Maximum observed query:
+AAAA example.com
+
+Maximum observed packet sizes:
+57 B request
+324 B response
+
+The measurements were derived from captured network packets.
+No volumetric traffic or denial-of-service testing was performed.
